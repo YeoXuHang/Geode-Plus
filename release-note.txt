@@ -319,8 +319,10 @@ Fix
 
 Changelog for 1.1.7
 ---------------------------------------------------------
+Added Item
+∎Celestite Shards
+---------------------------------------------------------
 Added Blocks
-
 ∎Budding Celestite
 ∎Celestite Block
 ∎Celestite Cluster
@@ -339,5 +341,6 @@ Added Feature
 ∎Celestite
 ---------------------------------------------------------
 Fix
-∎Glowstone Cluster Block didnt grow
+∎Glowstone Cluster Block didn't glow
+∎Blocks now match block tags correctly
 ---------------------------------------------------------
