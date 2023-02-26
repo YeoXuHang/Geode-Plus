@@ -316,3 +316,28 @@ Changelog for 1.1.6
 Fix
 ∎Crash when Redstone Cluster and Gold Nugget Cluster drop xp
 ---------------------------------------------------------
+
+Changelog for 1.1.7
+---------------------------------------------------------
+Added Blocks
+
+∎Budding Celestite
+∎Celestite Block
+∎Celestite Cluster
+∎Large Celestite Bud
+∎Medium Celestite Bud
+∎Small Celestite Bud
+
+∎Nether Ancient Debris Cluster Block
+∎Diamond Crystal Block
+∎Emerald Cluster Block
+∎Lapis Cluster Block
+∎Restone Crystal Block
+---------------------------------------------------------
+Added Feature
+-Geodes
+∎Celestite
+---------------------------------------------------------
+Fix
+∎Glowstone Cluster Block didnt grow
+---------------------------------------------------------

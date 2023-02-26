@@ -3,6 +3,7 @@ package net.yeoxuhang.geodeplus.forge.datagen;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yeoxuhang.geodeplus.GeodePlus;
@@ -98,7 +99,19 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get(),
                 GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get(),
                 GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(),
-                GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get()
+                GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get(),
+                GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get(),
+                GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK.get(),
+                GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK.get(),
+                GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK.get(),
+                GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK.get(),
+                GeodePlusBlocksRegistry.BUDDING_CELESTINE.get(),
+                GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK.get(),
+                GeodePlusBlocksRegistry.CELESTINE_CLUSTER.get(),
+                GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get(),
+                GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get(),
+                GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get(),
+                GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get()
         );
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
                 GeodePlusBlocksRegistry.LAPIS_CLUSTER.get(),
@@ -168,6 +181,10 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(),
                 GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get()
         );
+        this.tag(BlockTags.NEEDS_IRON_TOOL).add(
+                GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK.get(),
+                GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK.get(),
+                GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK.get());
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
                 GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get(),
                 GeodePlusBlocksRegistry.BUDDING_WRAPPIST.get(),
@@ -179,9 +196,16 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get(),
                 GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get(),
                 GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(),
+                GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get(),
                 GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get(),
                 GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get(),
-                GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get()
+                GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get(),
+                GeodePlusBlocksRegistry.BUDDING_CELESTINE.get(),
+                GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK.get(),
+                GeodePlusBlocksRegistry.CELESTINE_CLUSTER.get(),
+                GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get(),
+                GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get(),
+                GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get()
         );
         this.tag(GeodePlusTagRegistry.Blocks.CAN_LARGE_ECHO_CRYSTAL_PLACE).add(Blocks.SCULK,
                 Blocks.STONE,
@@ -201,6 +225,13 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.WALLS).add(
                 GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get()
+        );
+        this.tag(GeodePlusTagRegistry.Blocks.GEODE_INVALID_BLOCKS).add(
+                Blocks.BEDROCK,
+                Blocks.ICE,
+                Blocks.BLUE_ICE,
+                Blocks.PACKED_ICE,
+                Blocks.LAVA
         );
     }
 }

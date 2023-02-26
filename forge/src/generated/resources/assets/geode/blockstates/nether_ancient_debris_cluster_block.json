@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "geode:block/nether_ancient_debris_cluster_block"
+    }
+  }
+}

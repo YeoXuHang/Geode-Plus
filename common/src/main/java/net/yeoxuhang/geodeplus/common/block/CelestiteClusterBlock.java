@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class CelestineClusterBlock extends AmethystBlock implements SimpleWaterloggedBlock {
+public class CelestiteClusterBlock extends AmethystBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
     protected final VoxelShape northAabb;
@@ -30,7 +30,7 @@ public class CelestineClusterBlock extends AmethystBlock implements SimpleWaterl
     protected final VoxelShape upAabb;
     protected final VoxelShape downAabb;
 
-    public CelestineClusterBlock(int box, int i, Properties properties) {
+    public CelestiteClusterBlock(int box, int i, Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
         this.upAabb = Block.box((double)i, 0.0D, (double)i, (double)(16 - i), (double)box, (double)(16 - i));

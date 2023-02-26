@@ -1,8 +1,11 @@
-// 1.19.2	2022-12-25T11:17:35.3673475	Item Models: geode
+// 1.19.2	2023-02-26T09:06:30.6045232	Item Models: geode
+8eec514d6a886f73c0806def6b6653d77a7d4b56 assets/geode/models/item/celestite_cluster.json
+1f331d6ebf69cd803d532b5f7a12ee394f18db44 assets/geode/models/item/celestite_shard.json
 5439293c737590ef3a601c08061bd7a0d24eac4d assets/geode/models/item/diamond_crystal.json
 d56d457d8846ccdb5f747f4f7cb1de0c9d14ab02 assets/geode/models/item/echo_crystal.json
 da47dc3119350b18cfcf4fd3f6c686f361726a6c assets/geode/models/item/emerald_cluster.json
 4e64704cec51837410a6514736c9c42e689fc5b8 assets/geode/models/item/lapis_cluster.json
+7760a992e271684e560a840448670ba0c884bf5c assets/geode/models/item/large_celestite_bud.json
 f01898c7d9b9ec0e2745a46cb81286f8d25dbff8 assets/geode/models/item/large_diamond_bud.json
 7e2d2bd8a79fde8e1e15ae718a9a329492220be6 assets/geode/models/item/large_echo_bud.json
 d27144cd9ea133aadda33a8a5cd51501ecd11a4e assets/geode/models/item/large_emerald_bud.json
@@ -14,6 +17,7 @@ bdc68b3bf98afd19b90a2bfdc7b7d8717189386d assets/geode/models/item/large_nether_g
 6c702ba18ff48f2a366d035fdd577d31935b1a07 assets/geode/models/item/large_prismarine_bud.json
 73c9b70ff6a4de4cb193849d96fcfb7188f6da27 assets/geode/models/item/large_redstone_bud.json
 f3d266689c95a0ff59d16954e477be3bf515e427 assets/geode/models/item/large_wrappist_bud.json
+abb99deb5a81325c4af5c3da3b77504701267960 assets/geode/models/item/medium_celestite_bud.json
 7cd0e301efefa17e334db5acbf359466a024aa98 assets/geode/models/item/medium_diamond_bud.json
 ce11e5ee9011f367e5229826670e7135886fc201 assets/geode/models/item/medium_echo_bud.json
 830fd32a22d6ae5003afcd39de359f41c57cc029 assets/geode/models/item/medium_emerald_bud.json
@@ -31,6 +35,7 @@ f0f26534c5ca2ffd1d7c070a9145beea1143a465 assets/geode/models/item/nether_gold_nu
 1a7386151d18e15430028beaf9cafa2580e56798 assets/geode/models/item/nether_quartz_crystal.json
 80afce1c9b675c77c95da22b8c6f586874456ffe assets/geode/models/item/prismarine_cluster.json
 b382f2feef077a5218a2a9915309161d513452cc assets/geode/models/item/redstone_crystal.json
+7cd4b7c5aca0302b88aa41d70c8a4dfb997a24bf assets/geode/models/item/small_celestite_bud.json
 64cede4e828a0b1a17f9e103711e3b2371bbe1de assets/geode/models/item/small_diamond_bud.json
 9d4c19c2c04743a2965f2d158e71b3570a4c6617 assets/geode/models/item/small_echo_bud.json
 c5ea7226198ffbbeb51455d2dd165c3a3b4fb20f assets/geode/models/item/small_emerald_bud.json

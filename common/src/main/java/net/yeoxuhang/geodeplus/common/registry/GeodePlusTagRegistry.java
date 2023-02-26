@@ -54,6 +54,9 @@ public class GeodePlusTagRegistry {
         public static final TagKey<Biome> HAS_BLACKSTONE_ANCIENT_DEBRIS_GEODE
                 = biomeTag("has_blackstone_ancient_debris_geode");
 
+        public static final TagKey<Biome> HAS_CELESTITE_GEODE
+                = biomeTag("has_celestite_geode");
+
         //Crystals
         public static final TagKey<Biome> HAS_ECHO_CRYSTAL
                 = biomeTag("has_echo_crystal");
@@ -85,6 +88,8 @@ public class GeodePlusTagRegistry {
         public static final TagKey<Block> CAN_LARGE_PRISMARINE_CRYSTAL_PLACE
                 = blockTag("can_large_prismarine_crystal_place");
 
+        public static final TagKey<Block> GEODE_INVALID_BLOCKS
+                = blockTag("geode_invalid_blocks");
 
         private static TagKey<Block> blockTag(String name) {
             return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(GeodePlus.MOD_ID, name));

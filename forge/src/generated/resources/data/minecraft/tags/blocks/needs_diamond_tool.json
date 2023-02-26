@@ -10,8 +10,15 @@
     "geode:budding_basalt_ancient_debris",
     "geode:budding_blackstone_ancient_debris",
     "geode:nether_ancient_debris_cluster",
+    "geode:nether_ancient_debris_cluster_block",
     "geode:large_nether_ancient_debris_bud",
     "geode:medium_nether_ancient_debris_bud",
-    "geode:small_nether_ancient_debris_bud"
+    "geode:small_nether_ancient_debris_bud",
+    "geode:budding_celestite",
+    "geode:celestite_block",
+    "geode:celestite_cluster",
+    "geode:large_celestite_bud",
+    "geode:medium_celestite_bud",
+    "geode:small_celestite_bud"
   ]
 }

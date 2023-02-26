@@ -5,9 +5,10 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
@@ -25,6 +26,12 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> save) {
 
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK.get()).define('S', GeodePlusItemsRegistry.CELESTITE_SHARD.get()).pattern("SS").pattern("SS").unlockedBy("has_wrappist_shard", has(GeodePlusItemsRegistry.CELESTITE_SHARD.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_ancient_debris_cluster", has(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK.get()).define('S', GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get()).pattern("SS").pattern("SS").unlockedBy("has_diamond_crystal", has(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.EMERALD_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_emerald_cluster", has(GeodePlusBlocksRegistry.EMERALD_CLUSTER.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.LAPIS_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_lapis_cluster", has(GeodePlusBlocksRegistry.LAPIS_CLUSTER.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK.get()).define('S', GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get()).pattern("SS").pattern("SS").unlockedBy("has_redstone_crystal", has(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get())).save(save);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get()).define('S', GeodePlusItemsRegistry.WRAPPIST_SHARD.get()).pattern("SS").pattern("SS").unlockedBy("has_wrappist_shard", has(GeodePlusItemsRegistry.WRAPPIST_SHARD.get())).save(save);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_glowstone_cluster", has(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get())).save(save);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_prismarine_cluster", has(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get())).save(save);

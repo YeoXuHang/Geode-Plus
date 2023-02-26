@@ -15,26 +15,26 @@ import java.util.function.Supplier;
 public class GeodePlusBlocksRegistry {
 
 
-    public static final Supplier<Block> BUDDING_CELESTINE = registerBlock("budding_celestine",
-            () -> new BuddingCelestineBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodePlus.TAB);
+    public static final Supplier<BuddingCelestiteBlock> BUDDING_CELESTINE = registerBlock("budding_celestite",
+            () -> new BuddingCelestiteBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodePlus.TAB);
 
-    public static final Supplier<Block> CELESTINE_CLUSTER_BLOCK = registerBlock("celestine_cluster_block",
+    public static final Supplier<Block> CELESTINE_CLUSTER_BLOCK = registerBlock("celestite_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
-    public static final Supplier<CelestineClusterBlock> CELESTINE_CLUSTER = registerBlock("celestine_cluster",
-            () -> new CelestineClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
+    public static final Supplier<CelestiteClusterBlock> CELESTINE_CLUSTER = registerBlock("celestite_cluster",
+            () -> new CelestiteClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
             } )), GeodePlus.TAB);
-    public static final Supplier<CelestineClusterBlock> LARGE_CELESTINE_BUD = registerBlock("large_celestine_bud",
-            () -> new CelestineClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+    public static final Supplier<CelestiteClusterBlock> LARGE_CELESTINE_BUD = registerBlock("large_celestite_bud",
+            () -> new CelestiteClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
                 return 2;
             })), GeodePlus.TAB);
-    public static final Supplier<CelestineClusterBlock> MEDIUM_CELESTINE_BUD = registerBlock("medium_celestine_bud",
-            () -> new CelestineClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+    public static final Supplier<CelestiteClusterBlock> MEDIUM_CELESTINE_BUD = registerBlock("medium_celestite_bud",
+            () -> new CelestiteClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
                 return 1;
             })), GeodePlus.TAB);
-    public static final Supplier<CelestineClusterBlock> SMALL_CELESTINE_BUD = registerBlock("small_celestine_bud",
-            () -> new CelestineClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodePlus.TAB);
+    public static final Supplier<CelestiteClusterBlock> SMALL_CELESTINE_BUD = registerBlock("small_celestite_bud",
+            () -> new CelestiteClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodePlus.TAB);
 
     public static final Supplier<Block> BUDDING_PRISMARINE = registerBlock("budding_prismarine",
             () -> new BuddingPrismarineBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodePlus.TAB);
@@ -66,6 +66,9 @@ public class GeodePlusBlocksRegistry {
     public static final Supplier<BuddingLapisBlock> BUDDING_SCULK_LAPIS = registerBlock("budding_sculk_lapis",
             () -> new BuddingLapisBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.SCULK).requiresCorrectToolForDrops()), GeodePlus.TAB);
 
+    public static final Supplier<Block> LAPIS_CLUSTER_BLOCK = registerBlock("lapis_cluster_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
     public static final Supplier<OresClusterBlock> LAPIS_CLUSTER = registerBlock("lapis_cluster",
             () -> new OresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
@@ -90,6 +93,9 @@ public class GeodePlusBlocksRegistry {
     public static final Supplier<Block> BUDDING_SCULK_REDSTONE = registerBlock("budding_sculk_redstone",
             () -> new BuddingRedstoneBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.SCULK).requiresCorrectToolForDrops()), GeodePlus.TAB);
 
+    public static final Supplier<Block> REDSTONE_CRYSTAL_BLOCK = registerBlock("redstone_crystal_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
     public static final Supplier<Block> REDSTONE_CRYSTAL = registerBlock("redstone_crystal",
             () -> new RedstoneOresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
@@ -114,6 +120,9 @@ public class GeodePlusBlocksRegistry {
     public static final Supplier<Block> BUDDING_SCULK_EMERALD = registerBlock("budding_sculk_emerald",
             () -> new BuddingEmeraldBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.SCULK).requiresCorrectToolForDrops()), GeodePlus.TAB);
 
+    public static final Supplier<Block> EMERALD_CLUSTER_BLOCK = registerBlock("emerald_cluster_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
     public static final Supplier<Block> EMERALD_CLUSTER = registerBlock("emerald_cluster",
             () -> new OresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
@@ -138,6 +147,9 @@ public class GeodePlusBlocksRegistry {
     public static final Supplier<Block> BUDDING_SCULK_DIAMOND = registerBlock("budding_sculk_diamond",
             () -> new BuddingDiamondBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.SCULK).requiresCorrectToolForDrops()), GeodePlus.TAB);
 
+    public static final Supplier<Block> DIAMOND_CRYSTAL_BLOCK = registerBlock("diamond_crystal_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
     public static final Supplier<Block> DIAMOND_CRYSTAL = registerBlock("diamond_crystal",
             () -> new OresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
@@ -259,6 +271,10 @@ public class GeodePlusBlocksRegistry {
             () -> new BuddingAncientDebrisBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(10F).sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops().lightLevel((p_152632_) -> {
                 return 10;
             })), GeodePlus.TAB);
+
+    public static final Supplier<Block> ANCIENT_DEBRIS_CLUSTER_BLOCK = registerBlock("nether_ancient_debris_cluster_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
     public static final Supplier<Block> ANCIENT_DEBRIS_CLUSTER = registerBlock("nether_ancient_debris_cluster",
             () -> new WrappistClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.ANCIENT_DEBRIS).strength(10F).lightLevel((p_60929_) ->{
                 return 8;

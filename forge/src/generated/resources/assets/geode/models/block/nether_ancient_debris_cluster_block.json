@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "geode:block/nether_ancient_debris_cluster_block"
+  }
+}

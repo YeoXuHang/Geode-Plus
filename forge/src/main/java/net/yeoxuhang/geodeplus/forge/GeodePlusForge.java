@@ -2,15 +2,20 @@ package net.yeoxuhang.geodeplus.forge;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.GeodePlusClient;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
 import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlockEntityRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodePlusBiomeModifierRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodePlusLootModifierRegistry;
+import net.yeoxuhang.geodeplus.forge.util.BrewingRecipe;
 import net.yeoxuhang.geodeplus.platform.forge.BlockEntityTypeHelperImpl;
 import net.yeoxuhang.geodeplus.platform.forge.ClientHelperImpl;
 import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
@@ -39,6 +44,14 @@ public class GeodePlusForge {
 
         GeodePlusBiomeModifierRegistry.register(eventBus);
         GeodePlusLootModifierRegistry.register(eventBus);
+        eventBus.addListener(this::setup);
+    }
+
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Potions.WATER,
+                    GeodePlusItemsRegistry.CELESTITE_SHARD.get(), Potions.STRONG_HEALING));
+        });
     }
 
     @Mod.EventBusSubscriber(modid = GeodePlus.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)

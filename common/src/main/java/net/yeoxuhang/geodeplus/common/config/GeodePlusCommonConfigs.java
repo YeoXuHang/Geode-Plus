@@ -38,6 +38,7 @@ public class GeodePlusCommonConfigs implements Config {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BLACKSTONE_QUARTZ_GEODE = new ConfigOption<>("Enable Blackstone Quartz Geode", true);
 
     public static final ConfigOption<Boolean> SHOULD_GENERATE_END_WRAPPIST_GEODE = new ConfigOption<>("Enable Wrappist Geode", true);
+    public static final ConfigOption<Boolean> SHOULD_GENERATE_CELESTITE_GEODE = new ConfigOption<>("Enable Celestite Geode", true);
 
     public static final ConfigOption<Boolean> SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL = new ConfigOption<>("Enable Large Prismarine Crystal", true);
     public static final ConfigOption<Boolean> SHOULD_GENERATE_LARGE_ECHO_CRYSTAL = new ConfigOption<>("Enable Large Echo Crystal", true);
@@ -54,6 +55,7 @@ public class GeodePlusCommonConfigs implements Config {
     public static final ConfigOption<Integer> RARITY_ORES_GEODE = new ConfigOption<>("Rarity of Ores Geode", 48);
 
     public static final ConfigOption<Integer> RARITY_RARE_ORES_GEODE = new ConfigOption<>("Rarity of Rare Ores Geode", 72);
+    public static final ConfigOption<Integer> RARITY_SWAMP_GEODE = new ConfigOption<>("Rarity of Swamp Geode", 48);
 
     public static final ConfigOption<Integer> RARITY_NETHER_DEBRIS_GEODE = new ConfigOption<>("Rarity of Nether Ancient Debris Geode", 32);
 
@@ -104,6 +106,9 @@ public class GeodePlusCommonConfigs implements Config {
     public static final ConfigGroup END_WRAPPIST_GEODES = new ConfigGroup("End Wrappist Geodes",
             SHOULD_GENERATE_END_WRAPPIST_GEODE);
 
+    public static final ConfigGroup CELESTITE_GEODES = new ConfigGroup("Swamp Celestite Geodes",
+            SHOULD_GENERATE_CELESTITE_GEODE);
+
     public static final ConfigGroup LARGE_CRYSTALS = new ConfigGroup("Large Crystals",
             SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL ,SHOULD_GENERATE_LARGE_ECHO_CRYSTAL, SHOULD_GENERATE_LARGE_NETHER_QUARTZ_CRYSTAL, SHOULD_GENERATE_LARGE_NETHER_GLOWSTONE_CRYSTAL, SHOULD_GENERATE_LARGE_END_WRAPPIST_CRYSTAL);
 
@@ -113,6 +118,7 @@ public class GeodePlusCommonConfigs implements Config {
             RARITY_ECHO_GEODE,
             RARITY_ORES_GEODE,
             RARITY_RARE_ORES_GEODE,
+            RARITY_SWAMP_GEODE,
             RARITY_NETHER_DEBRIS_GEODE,
             RARITY_NETHER_GLOWSTONE_GEODE,
             RARITY_NETHER_GOLD_NUGGET_GEODE,

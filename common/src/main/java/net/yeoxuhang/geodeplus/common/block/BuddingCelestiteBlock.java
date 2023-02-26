@@ -12,11 +12,11 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
-public class BuddingCelestineBlock extends AmethystBlock {
+public class BuddingCelestiteBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
     private static final Direction[] DIRECTIONS = Direction.values();
 
-    public BuddingCelestineBlock(Properties p_152726_) {
+    public BuddingCelestiteBlock(Properties p_152726_) {
         super(p_152726_);
     }
 
@@ -32,15 +32,15 @@ public class BuddingCelestineBlock extends AmethystBlock {
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
                 block = GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get();
-            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get()) && blockstate.getValue(CelestineClusterBlock.FACING) == direction) {
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get()) && blockstate.getValue(CelestiteClusterBlock.FACING) == direction) {
                 block = GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get();
-            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get()) && blockstate.getValue(CelestineClusterBlock.FACING) == direction) {
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get()) && blockstate.getValue(CelestiteClusterBlock.FACING) == direction) {
                 block = GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get();
-            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get()) && blockstate.getValue(CelestineClusterBlock.FACING) == direction) {
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get()) && blockstate.getValue(CelestiteClusterBlock.FACING) == direction) {
                 block = GeodePlusBlocksRegistry.CELESTINE_CLUSTER.get();
             }
             if (block != null) {
-                BlockState blockstate1 = block.defaultBlockState().setValue(CelestineClusterBlock.FACING, direction).setValue(CelestineClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
+                BlockState blockstate1 = block.defaultBlockState().setValue(CelestiteClusterBlock.FACING, direction).setValue(CelestiteClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
                 p_220899_.setBlockAndUpdate(blockpos, blockstate1);
             }
 

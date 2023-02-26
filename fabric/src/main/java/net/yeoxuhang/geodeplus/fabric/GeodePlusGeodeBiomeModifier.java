@@ -111,6 +111,9 @@ public class GeodePlusGeodeBiomeModifier {
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_WRAPPIST_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_END_WRAPPIST_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodePlusPlacedFeatureRegistry.WRAPPIST_GEODE.get()));
             }
+            if (biome.is(GeodePlusTagRegistry.Biomes.HAS_CELESTITE_GEODE) && GeodePlusCommonConfigs.SHOULD_GENERATE_CELESTITE_GEODE.get()) {
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, getKey(GeodePlusPlacedFeatureRegistry.CELESTITE_GEODE.get()));
+            }
             //Crystals
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, getKey(GeodePlusPlacedFeatureRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR.get()));
@@ -129,6 +132,9 @@ public class GeodePlusGeodeBiomeModifier {
             }
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_WRAPPIST_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_END_WRAPPIST_CRYSTAL.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodePlusPlacedFeatureRegistry.WRAPPIST_CRYSTAL_SPIKE.get()));
+            }
+            if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL.get()) {
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, getKey(GeodePlusPlacedFeatureRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR.get()));
             }
         });
     }

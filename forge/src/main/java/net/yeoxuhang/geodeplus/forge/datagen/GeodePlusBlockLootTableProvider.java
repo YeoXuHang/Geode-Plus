@@ -19,6 +19,12 @@ import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
 public class GeodePlusBlockLootTableProvider extends BlockLoot {
     @Override
     protected void addTables() {
+        this.dropSelf(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get());
+        this.dropSelf(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK.get());
+        this.dropSelf(GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK.get());
+        this.dropSelf(GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK.get());
+        this.dropSelf(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK.get());
+        this.dropSelf(GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK.get());
         this.dropSelf(GeodePlusBlocksRegistry.GALCITE.get());
         this.dropSelf(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get());
         this.dropSelf(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get());
@@ -131,6 +137,15 @@ public class GeodePlusBlockLootTableProvider extends BlockLoot {
                                         .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
                                 .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.PRISMARINE_SHARD)
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))));
+        this.add(GeodePlusBlocksRegistry.CELESTINE_CLUSTER.get(),
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(GeodePlusItemsRegistry.CELESTITE_SHARD.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(GeodePlusItemsRegistry.CELESTITE_SHARD.get())
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
 
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get());
@@ -143,6 +158,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLoot {
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get());
 
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get());
@@ -155,6 +171,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLoot {
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get());
 
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get());
@@ -167,6 +184,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLoot {
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get());
 
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BASALT_GLOWSTONE.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BASALT_QUARTZ.get());
@@ -195,6 +213,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLoot {
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_CELESTINE.get());
 
         this.add(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), BlockLoot::createSlabItemTable);
     }

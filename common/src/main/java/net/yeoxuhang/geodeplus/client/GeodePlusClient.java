@@ -68,6 +68,11 @@ public class GeodePlusClient {
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get(), RenderType.cutout());
 
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.CELESTINE_CLUSTER.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get(), RenderType.cutout());
+
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get(), RenderType.cutout());
 	}
 }

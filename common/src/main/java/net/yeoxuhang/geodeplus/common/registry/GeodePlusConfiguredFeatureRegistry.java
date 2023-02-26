@@ -8,7 +8,6 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GeodeBlockSettings;
 import net.minecraft.world.level.levelgen.GeodeCrackSettings;
@@ -463,6 +462,20 @@ public class GeodePlusConfiguredFeatureRegistry {
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
+    public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> CELESTITE_GEODE =
+            FeatureUtils.register("celestite_geode", Feature.GEODE,
+                    new GeodeConfiguration(
+                            new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_CELESTINE.get()),
+                                    BlockStateProvider.simple(Blocks.CALCITE),
+                                    BlockStateProvider.simple(Blocks.MUD),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.CELESTINE_CLUSTER.get().defaultBlockState()),
+                                    BlockTags.FEATURES_CANNOT_REPLACE, GeodePlusTagRegistry.Blocks.GEODE_INVALID_BLOCKS),
+                            new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
     public static <FC extends FeatureConfiguration, F extends Feature<FC>> Holder<ConfiguredFeature<FC, ?>> registerConfiguredFeature(String name, F feature, FC featureConfiguration) {
         ResourceLocation resourceLocation = new ResourceLocation(GeodePlus.MOD_ID, name);

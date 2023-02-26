@@ -1,9 +1,11 @@
-// 1.19.2	2022-12-25T11:17:35.3743695	Tags for minecraft:block
+// 1.19.2	2023-02-26T14:19:20.1446057	Tags for minecraft:block
 bdc1945bad1d7896abfcd4a77ab43e5edf8aea4f data/geode/tags/blocks/can_large_echo_crystal_place.json
 c810320bb4788378c975caf758177e7f4a257c3f data/geode/tags/blocks/can_large_prismarine_crystal_place.json
 9994f212884e8264af96eaba34aa7e89696d8994 data/geode/tags/blocks/can_large_wrappist_crystal_place.json
+8c073ed5b6f9d3a6429b0527fd71918035194e47 data/geode/tags/blocks/geode_invalid_blocks.json
 fadeb0d2eef6a573b6769f913014f6e46b1f7935 data/geode/tags/blocks/wrappist_pedestal_cannot_place_on.json
-48e9c6f820dd87834e0938b563e8880612d791eb data/minecraft/tags/blocks/mineable/pickaxe.json
-8862047332147fbd55fec28db6a8029625b8600d data/minecraft/tags/blocks/needs_diamond_tool.json
+30740c95de15a93fb1ed872ef90e62ec5ab53106 data/minecraft/tags/blocks/mineable/pickaxe.json
+ebd15e5d1b27710ec8e589a33d3e53b9f5f1227d data/minecraft/tags/blocks/needs_diamond_tool.json
+1059f95e043133ce011c1f7cc4f67d392850fb0a data/minecraft/tags/blocks/needs_iron_tool.json
 1880a56dd401e38b7b48a053a3cbc5b45d1b260d data/minecraft/tags/blocks/needs_stone_tool.json
 1bf69e8e2b2acfdb11775d6dcb2ee2259d1466c4 data/minecraft/tags/blocks/walls.json

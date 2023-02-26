@@ -14,6 +14,7 @@ public class GeodePlusBiomeTagProvider extends BiomeTagsProvider {
     }
 
     protected void addTags() {
+        this.tag(GeodePlusTagRegistry.Biomes.HAS_CELESTITE_GEODE).add(Biomes.SWAMP, Biomes.MANGROVE_SWAMP);
         this.tag(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_GEODE).addTag(BiomeTags.IS_DEEP_OCEAN);
         this.tag(GeodePlusTagRegistry.Biomes.HAS_LAPIS_GEODE).addTag(BiomeTags.IS_OVERWORLD);
         this.tag(GeodePlusTagRegistry.Biomes.HAS_REDSTONE_GEODE).addTag(BiomeTags.IS_OVERWORLD);

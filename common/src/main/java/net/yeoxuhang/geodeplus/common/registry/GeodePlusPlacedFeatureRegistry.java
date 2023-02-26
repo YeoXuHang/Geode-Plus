@@ -80,6 +80,8 @@ public class GeodePlusPlacedFeatureRegistry {
     public static final Supplier<PlacedFeature> WRAPPIST_CRYSTAL_SPIKE = RegistryHelper.registerPlacedFeature("wrappist_crystal_spike", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.WRAPPIST_CRYSTAL_SPIKE, List.of(placementEndCrystal(), inSquarePlacement(), placementNetherCrystalModifier(), biomeFilter())));
     public static final Supplier<PlacedFeature> PRISMARINE_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("prismarine_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementPrismarineModifier(), biomeFilter())));
 
+    public static final Supplier<PlacedFeature> CELESTITE_GEODE = RegistryHelper.registerPlacedFeature("celestite_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.CELESTITE_GEODE, List.of(raritySwampGeode(), inSquarePlacement(), placementSwampModifier(), biomeFilter())));
+
     //private static RarityFilter rarityOceanGeode() {
     //        return RarityFilter.onAverageOnceEvery(TEST.get());
     //    }
@@ -124,6 +126,10 @@ public class GeodePlusPlacedFeatureRegistry {
     private static RarityFilter rarityRareOreGeode() {
         return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_RARE_ORES_GEODE.get());
     }
+    private static RarityFilter raritySwampGeode() {
+        return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_SWAMP_GEODE.get());
+    }
+
 
     private static InSquarePlacement inSquarePlacement() {
         return InSquarePlacement.spread();
@@ -165,7 +171,9 @@ public class GeodePlusPlacedFeatureRegistry {
     private static PlacementModifier placementEndModifier() {
         return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(32));
     }
-
+    private static PlacementModifier placementSwampModifier() {
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(50), VerticalAnchor.absolute(110));
+    }
     private static BiomeFilter biomeFilter() {
         return BiomeFilter.biome();
     }

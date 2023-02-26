@@ -82,6 +82,18 @@
     "geode:prismarine_cluster",
     "geode:large_prismarine_bud",
     "geode:medium_prismarine_bud",
-    "geode:small_prismarine_bud"
+    "geode:small_prismarine_bud",
+    "geode:nether_ancient_debris_cluster_block",
+    "geode:diamond_crystal_block",
+    "geode:emerald_cluster_block",
+    "geode:lapis_cluster_block",
+    "geode:redstone_crystal_block",
+    "geode:budding_celestite",
+    "geode:celestite_block",
+    "geode:celestite_cluster",
+    "geode:large_celestite_bud",
+    "geode:medium_celestite_bud",
+    "geode:small_celestite_bud",
+    "geode:nether_ancient_debris_cluster_block"
   ]
 }

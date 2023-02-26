@@ -24,6 +24,7 @@ public class GeodePlusItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        itemModel(GeodePlusItemsRegistry.CELESTITE_SHARD, GENERATED);
         itemModel(GeodePlusItemsRegistry.WRAPPIST_SHARD, GENERATED);
         itemModel(GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN, GOAT_HORN);
         singleLayerBlockModel(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL, GENERATED);
@@ -85,6 +86,11 @@ public class GeodePlusItemModelProvider extends ItemModelProvider {
         singleLayerBlockModel(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD, GENERATED);
         singleLayerBlockModel(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD, GENERATED);
         singleLayerBlockModel(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD, GENERATED);
+
+        singleLayerBlockModel(GeodePlusBlocksRegistry.CELESTINE_CLUSTER, GENERATED);
+        singleLayerBlockModel(GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD, GENERATED);
+        singleLayerBlockModel(GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD, GENERATED);
+        singleLayerBlockModel(GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD, GENERATED);
     }
     public void blockModel(Supplier<? extends Block> block) {
         getExistingFile(modLoc("block/" + getName(block.get())));

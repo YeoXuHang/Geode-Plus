@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "geode:block/redstone_crystal_block"
+    }
+  }
+}

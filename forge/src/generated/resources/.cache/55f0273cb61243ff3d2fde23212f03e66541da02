@@ -1,8 +1,9 @@
-// 1.19.2	2022-12-02T14:32:10.3544891	Tags for minecraft:worldgen/biome
+// 1.19.2	2023-02-26T09:06:30.579559	Tags for minecraft:worldgen/biome
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode/tags/worldgen/biome/has_basalt_ancient_debris_geode.json
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode/tags/worldgen/biome/has_basalt_glowstone_geode.json
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode/tags/worldgen/biome/has_basalt_gold_nugget_geode.json
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode/tags/worldgen/biome/has_basalt_quartz_geode.json
+6525dda69924a36f16797ed873bffc083e1f4de5 data/geode/tags/worldgen/biome/has_celestite_geode.json
 b020f6cdcd2d955793278b2f89a178a1d31e599a data/geode/tags/worldgen/biome/has_diamond_geode.json
 45e2314b6fbf2e847bd70c163e678e0e756a1640 data/geode/tags/worldgen/biome/has_echo_crystal.json
 45e2314b6fbf2e847bd70c163e678e0e756a1640 data/geode/tags/worldgen/biome/has_echo_geode.json
