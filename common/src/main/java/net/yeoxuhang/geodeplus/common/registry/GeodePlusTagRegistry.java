@@ -1,5 +1,6 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
+import net.minecraft.world.item.Item;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -93,6 +94,15 @@ public class GeodePlusTagRegistry {
 
         private static TagKey<Block> blockTag(String name) {
             return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(GeodePlus.MOD_ID, name));
+        }
+    }
+    public static class Items {
+        public static final TagKey<Item> CELESTITE
+                = itemTag("celestite");
+
+
+        private static TagKey<Item> itemTag(String name) {
+            return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(GeodePlus.MOD_ID, name));
         }
     }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "gunpowder",
+  "ingredients": [
+    {
+      "tag": "geode:celestite"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:gunpowder"
+  }
+}

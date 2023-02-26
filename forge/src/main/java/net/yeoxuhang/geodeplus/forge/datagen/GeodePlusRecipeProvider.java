@@ -1,11 +1,10 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.Potions;
@@ -15,6 +14,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 
 import java.util.function.Consumer;
 
@@ -25,7 +25,7 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> save) {
-
+        gunpowderFromCelestite(save, Items.GUNPOWDER, GeodePlusTagRegistry.Items.CELESTITE);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK.get()).define('S', GeodePlusItemsRegistry.CELESTITE_SHARD.get()).pattern("SS").pattern("SS").unlockedBy("has_wrappist_shard", has(GeodePlusItemsRegistry.CELESTITE_SHARD.get())).save(save);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_ancient_debris_cluster", has(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get())).save(save);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK.get()).define('S', GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get()).pattern("SS").pattern("SS").unlockedBy("has_diamond_crystal", has(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get())).save(save);
@@ -48,5 +48,8 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.END_STONE), GeodePlusBlocksRegistry.SMOOTH_END_STONE.get().asItem().asItem(), 0.1F, 200).unlockedBy("has_end_stone", has(Blocks.END_STONE)).save(save);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get()).define('#', Blocks.END_STONE_BRICKS).define('O', Items.PRISMARINE_SHARD).define('W', GeodePlusItemsRegistry.WRAPPIST_SHARD.get()).pattern("W W").pattern("O#O").unlockedBy("has_wrappist_shard", has(GeodePlusItemsRegistry.WRAPPIST_SHARD.get())).save(save);
 
+    }
+    protected static void gunpowderFromCelestite(Consumer<FinishedRecipe> consumer, ItemLike arg, TagKey<Item> arg2) {
+        ShapelessRecipeBuilder.shapeless(arg, 4).requires(arg2).group("gunpowder").unlockedBy("has_celestite", has(arg2)).save(consumer);
     }
 }
