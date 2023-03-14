@@ -12,9 +12,7 @@ import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 
 public class GeodePlus {
     public static final CreativeModeTab TAB = RegistryHelper.registerCreativeModeTab(() -> new ItemStack(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get()));
-
     public static final String MOD_ID = "geode";
-
     public static void init() {
         GeodePlusItemsRegistry.initialize();
         GeodePlusBlocksRegistry.initialize();

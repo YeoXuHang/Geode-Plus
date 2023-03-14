@@ -112,11 +112,11 @@ public class GeodePlusGeodeBiomeModifier {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodePlusPlacedFeatureRegistry.WRAPPIST_GEODE.get()));
             }
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_CELESTITE_GEODE) && GeodePlusCommonConfigs.SHOULD_GENERATE_CELESTITE_GEODE.get()) {
-                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, getKey(GeodePlusPlacedFeatureRegistry.CELESTITE_GEODE.get()));
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodePlusPlacedFeatureRegistry.CELESTITE_GEODE.get()));
             }
             //Crystals
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL.get()) {
-                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, getKey(GeodePlusPlacedFeatureRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR.get()));
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodePlusPlacedFeatureRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR.get()));
             }
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_ECHO_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_ECHO_CRYSTAL.get()){
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodePlusPlacedFeatureRegistry.ECHO_CRYSTAL_SPIKE.get()));
