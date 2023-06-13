@@ -47,6 +47,7 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.END_STONE), GeodePlusBlocksRegistry.SMOOTH_END_STONE.get().asItem().asItem(), 0.1F, 200).unlockedBy("has_end_stone", has(Blocks.END_STONE)).save(save);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get()).define('#', Blocks.END_STONE_BRICKS).define('O', Items.PRISMARINE_SHARD).define('W', GeodePlusItemsRegistry.WRAPPIST_SHARD.get()).pattern("W W").pattern("O#O").unlockedBy("has_wrappist_shard", has(GeodePlusItemsRegistry.WRAPPIST_SHARD.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.CELESTITE_PEDESTAL.get()).define('#', Blocks.POLISHED_BLACKSTONE_BRICKS).define('O', Blocks.GLASS).define('W', GeodePlusItemsRegistry.CELESTITE_SHARD.get()).pattern("W W").pattern("O#O").unlockedBy("has_wrappist_shard", has(GeodePlusItemsRegistry.CELESTITE_SHARD.get())).save(save);
 
     }
     protected static void gunpowderFromCelestite(Consumer<FinishedRecipe> consumer, ItemLike arg, TagKey<Item> arg2) {

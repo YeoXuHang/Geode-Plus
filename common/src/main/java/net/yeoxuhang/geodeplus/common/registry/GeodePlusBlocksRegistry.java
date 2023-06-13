@@ -353,6 +353,11 @@ public class GeodePlusBlocksRegistry {
                 return 8;
             })), GeodePlus.TAB);
 
+    public static final Supplier<CelestitePedestalBlock> CELESTITE_PEDESTAL = registerBlock("celestite_pedestal",
+            () -> new CelestitePedestalBlock(BlockBehaviour.Properties.copy(CELESTINE_CLUSTER_BLOCK.get()).noOcclusion().lightLevel((p_60929_) -> {
+                return 8;
+            })), GeodePlus.TAB);
+
     private static <T extends Block> Supplier<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return RegistryHelper.registerBlock(name, block);
     }

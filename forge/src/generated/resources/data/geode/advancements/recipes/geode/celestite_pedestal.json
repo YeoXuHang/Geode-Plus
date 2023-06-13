@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "geode:celestite_pedestal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wrappist_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "geode:celestite_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_wrappist_shard",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "geode:celestite_pedestal"
+    ]
+  }
+}

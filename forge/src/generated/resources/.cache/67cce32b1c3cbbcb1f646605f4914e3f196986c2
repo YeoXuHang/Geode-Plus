@@ -1,4 +1,4 @@
-// 1.19.2	2023-02-26T14:19:20.1481197	LootTables
+// 1.19.2	2023-03-23T21:58:50.2022424	LootTables
 aa9c72eec161e83d3fe3a84df7241118a31f6926 data/geode/loot_tables/blocks/budding_basalt_ancient_debris.json
 23f529e21e8a27bb952fd51a3b665d2ff247e38a data/geode/loot_tables/blocks/budding_basalt_glowstone.json
 a8a8b30532ddd977b3ff9f98e5619747fcd245ab data/geode/loot_tables/blocks/budding_basalt_gold_nugget.json
@@ -29,6 +29,7 @@ e6a61ee066dff2cd0444d9aa0d4906a1feeb36ef data/geode/loot_tables/blocks/budding_s
 c738407ae99ec6e625619d5ebfdb7c20896e7ee3 data/geode/loot_tables/blocks/budding_wrappist.json
 dbddc1fe1be8a4ab2668f4f19259991a6a822fa9 data/geode/loot_tables/blocks/celestite_block.json
 5df74bc8a95912d1b24aae8a6a06322ac3966d85 data/geode/loot_tables/blocks/celestite_cluster.json
+83e7e60e83c5d205ff64152d94b0dcf2eda32829 data/geode/loot_tables/blocks/celestite_pedestal.json
 4bb30cdf039e4cc7cb59e4e106d430ad1a4b595f data/geode/loot_tables/blocks/diamond_crystal.json
 d7cf0bc0eee5af58465d6e63c02d15d0be3b9727 data/geode/loot_tables/blocks/diamond_crystal_block.json
 95fb50a957d93aeb4c6e58b42b312f87d78b3063 data/geode/loot_tables/blocks/echo_crystal.json

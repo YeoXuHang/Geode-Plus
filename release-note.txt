@@ -344,3 +344,13 @@ Fix
 ∎Glowstone Cluster Block didn't glow
 ∎Blocks now match block tags correctly
 ---------------------------------------------------------
+
+Changelog for 1.1.8
+---------------------------------------------------------
+Change
+∎Textures for budding ores have been updated, like Diamond,
+ Emerald, Lapis, Redstone
+---------------------------------------------------------
+Fix
+∎Blocks tag,Warppist instead of Wrappist
+---------------------------------------------------------
