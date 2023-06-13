@@ -24,6 +24,7 @@
 
 A mod that add geodes to Minecraft Overworld, Nether and even The End!
 
+Credit: <a href="https://www.curseforge.com/members/orcinus73/projects">Orcinus - Large Crystal feature</a> 
   </div>
 <div align="center">
 <p align="center">

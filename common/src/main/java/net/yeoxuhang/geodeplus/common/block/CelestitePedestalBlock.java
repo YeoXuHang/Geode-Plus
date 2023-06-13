@@ -1,40 +1,40 @@
 package net.yeoxuhang.geodeplus.common.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.util.Mth;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RedStoneOreBlock;
+import net.minecraft.world.level.block.RedstoneTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
+import net.yeoxuhang.geodeplus.common.block.entity.CelestitePedestalBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.Supplier;
-
-public class WrappistPedestalBlock extends BaseEntityBlock {
-    public WrappistPedestalBlock(Properties properties) {
+public class CelestitePedestalBlock extends BaseEntityBlock {
+    public CelestitePedestalBlock(Properties properties) {
         super(properties);
     }
-
-
-    private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 8, 15);
+    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
@@ -42,7 +42,7 @@ public class WrappistPedestalBlock extends BaseEntityBlock {
     }
 
     public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
-        return !groundState.is(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get()) || groundState.is(GeodePlusTagRegistry.Blocks.WRAPPIST_PEDESTAL_CANNOT_PLACE_ON);
+        return !groundState.is(GeodePlusBlocksRegistry.CELESTITE_PEDESTAL.get()) || groundState.is(GeodePlusTagRegistry.Blocks.WRAPPIST_PEDESTAL_CANNOT_PLACE_ON);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class WrappistPedestalBlock extends BaseEntityBlock {
 
     public InteractionResult use(@NotNull BlockState state, Level worldIn, @NotNull BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
         ItemStack heldItem = player.getItemInHand(handIn);
-        if (worldIn.getBlockEntity(pos) instanceof WrappistPedestalBlockEntity wrappistPedestalBlock && (!player.isShiftKeyDown()  && heldItem.getItem() != this.asItem())) {
+        if (worldIn.getBlockEntity(pos) instanceof CelestitePedestalBlockEntity wrappistPedestalBlock && (!player.isShiftKeyDown()  && heldItem.getItem() != this.asItem())) {
             ItemStack stack = heldItem.copy();
             stack.setCount(1);
             if(wrappistPedestalBlock.getItem(0).isEmpty()){
@@ -63,7 +63,7 @@ public class WrappistPedestalBlock extends BaseEntityBlock {
                     heldItem.shrink(1);
                 }
                 return InteractionResult.SUCCESS;
-            }else if(wrappistPedestalBlock.getItem(0).sameItem(stack) && wrappistPedestalBlock.getItem(0).getMaxStackSize() > wrappistPedestalBlock.getItem(0).getCount() + stack.getCount()){
+            } else if(wrappistPedestalBlock.getItem(0).sameItem(stack) && wrappistPedestalBlock.getItem(0).getMaxStackSize() > wrappistPedestalBlock.getItem(0).getCount() + stack.getCount()){
                 wrappistPedestalBlock.getItem(0).grow(1);
                 if(!player.isCreative()){
                     heldItem.shrink(1);
@@ -81,31 +81,16 @@ public class WrappistPedestalBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new WrappistPedestalBlockEntity(pos, state);
+        return new CelestitePedestalBlockEntity(pos, state);
     }
 
     public void onRemove(BlockState state, Level worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
         BlockEntity tileentity = worldIn.getBlockEntity(pos);
-        if (tileentity instanceof WrappistPedestalBlockEntity) {
-            Containers.dropContents(worldIn, pos, (WrappistPedestalBlockEntity) tileentity);
+        if (tileentity instanceof CelestitePedestalBlockEntity) {
+            Containers.dropContents(worldIn, pos, (CelestitePedestalBlockEntity) tileentity);
             worldIn.updateNeighbourForOutputSignal(pos, this);
         }
         super.onRemove(state, worldIn, pos, newState, isMoving);
     }
 
-    public static void popResource(Level level, BlockPos blockPos, ItemStack itemStack) {
-        float f = EntityType.ITEM.getHeight() / 2.0F;
-        double d = (double)((float)blockPos.getX() + 0.1F) + Mth.nextDouble(level.random, -0.25, 0.25);
-        double e = (double)((float)blockPos.getY() + 0.1F) + Mth.nextDouble(level.random, -0.25, 0.25) - (double)f;
-        double g = (double)((float)blockPos.getZ() + 0.1F) + Mth.nextDouble(level.random, -0.25, 0.25);
-        popResource(level, () -> new ItemEntity(level, d, e, g, itemStack), itemStack);
-    }
-
-    private static void popResource(Level level, Supplier<ItemEntity> supplier, ItemStack itemStack) {
-        if (!level.isClientSide && !itemStack.isEmpty() && level.getGameRules().getBoolean(GameRules.RULE_DOBLOCKDROPS)) {
-            ItemEntity itemEntity = supplier.get();
-            itemEntity.setDefaultPickUpDelay();
-            level.addFreshEntity(itemEntity);
-        }
-    }
 }

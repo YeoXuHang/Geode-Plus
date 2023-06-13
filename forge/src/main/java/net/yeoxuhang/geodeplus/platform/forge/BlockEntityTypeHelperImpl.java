@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus.platform.forge;
 
 import net.yeoxuhang.geodeplus.GeodePlus;
+import net.yeoxuhang.geodeplus.common.block.entity.CelestitePedestalBlockEntity;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -16,5 +17,11 @@ public class BlockEntityTypeHelperImpl {
         return BLOCK_ENTITIES.register("wrappist_pedestal", () ->
                 BlockEntityType.Builder.of(WrappistPedestalBlockEntity::new,
                         GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get()).build(null));
+    }
+
+    public static Supplier<BlockEntityType<CelestitePedestalBlockEntity>> createCelestitePedastle() {
+        return BLOCK_ENTITIES.register("celestite_pedestal", () ->
+                BlockEntityType.Builder.of(CelestitePedestalBlockEntity::new,
+                        GeodePlusBlocksRegistry.CELESTITE_PEDESTAL.get()).build(null));
     }
 }

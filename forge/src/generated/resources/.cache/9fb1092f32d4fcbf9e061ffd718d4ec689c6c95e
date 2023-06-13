@@ -1,5 +1,6 @@
-// 1.19.2	2023-02-26T19:26:32.9047445	Recipes
+// 1.19.2	2023-03-23T21:58:50.1882774	Recipes
 65bb2be51fbbc6504da109e404c0aff3fe10d4a4 data/geode/advancements/recipes/geode/celestite_block.json
+190c641343dd9483627f8097aee4eca3bc6809a6 data/geode/advancements/recipes/geode/celestite_pedestal.json
 c54aea10ac220372e95a7ba6286f630296f3be92 data/geode/advancements/recipes/geode/diamond_crystal_block.json
 8122258a292e9668339b190938468c0ee028fb6f data/geode/advancements/recipes/geode/emerald_cluster_block.json
 90355e563b97bbefd3a33da221dc1a4ff71f3daa data/geode/advancements/recipes/geode/lapis_cluster_block.json
@@ -16,6 +17,7 @@ a7e9acd26cad923242a1ddc347eb2d1a88aeb6fa data/geode/advancements/recipes/geode/s
 6155b71ddd96975d474f4b5b076952f69b6339b3 data/geode/advancements/recipes/geode/wrappist_block.json
 ef605e711f6acbdb859297b3af45bf7b284116f2 data/geode/advancements/recipes/geode/wrappist_pedestal.json
 8576041b827f475fea7545b8886f4a3c1a3381af data/geode/recipes/celestite_block.json
+dd1382baf688985011ed3292bbf39ba28909aff8 data/geode/recipes/celestite_pedestal.json
 27a69eed5ab9dbc9624d963a3426ab01a5edb549 data/geode/recipes/diamond_crystal_block.json
 ead9de446006c37de1fd9d409aa54b8c92c0e73e data/geode/recipes/emerald_cluster_block.json
 ef16919ec8698f43c6c70813ccd37ed6e01fff1e data/geode/recipes/lapis_cluster_block.json

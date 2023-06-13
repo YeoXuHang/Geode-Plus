@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:polished_blackstone_bricks"
+    },
+    "O": {
+      "item": "minecraft:glass"
+    },
+    "W": {
+      "item": "geode:celestite_shard"
+    }
+  },
+  "pattern": [
+    "W W",
+    "O#O"
+  ],
+  "result": {
+    "item": "geode:celestite_pedestal"
+  }
+}

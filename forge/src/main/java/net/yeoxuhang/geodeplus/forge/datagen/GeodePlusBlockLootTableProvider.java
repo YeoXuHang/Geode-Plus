@@ -28,6 +28,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLoot {
         this.dropSelf(GeodePlusBlocksRegistry.GALCITE.get());
         this.dropSelf(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get());
         this.dropSelf(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get());
+        this.dropSelf(GeodePlusBlocksRegistry.CELESTITE_PEDESTAL.get());
         this.dropSelf(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get());
         this.dropSelf(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER_BLOCK.get());
         this.dropSelf(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get());

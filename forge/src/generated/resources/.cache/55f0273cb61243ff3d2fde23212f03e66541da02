@@ -1,4 +1,4 @@
-// 1.19.2	2023-02-26T09:06:30.579559	Tags for minecraft:worldgen/biome
+// 1.19.2	2023-03-23T21:58:50.179163	Tags for minecraft:worldgen/biome
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode/tags/worldgen/biome/has_basalt_ancient_debris_geode.json
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode/tags/worldgen/biome/has_basalt_glowstone_geode.json
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode/tags/worldgen/biome/has_basalt_gold_nugget_geode.json
@@ -18,5 +18,5 @@ ec7bbb0c9b5fc5378f8716f54862806404f04360 data/geode/tags/worldgen/biome/has_pris
 ec7bbb0c9b5fc5378f8716f54862806404f04360 data/geode/tags/worldgen/biome/has_prismarine_geode.json
 f4b9a635e85a94906a0f7e256399816049a4af89 data/geode/tags/worldgen/biome/has_quartz_crystal.json
 b020f6cdcd2d955793278b2f89a178a1d31e599a data/geode/tags/worldgen/biome/has_redstone_geode.json
-91b0eb2c9a1bca9eaa7aeb065cf6566cc9ef4ef6 data/geode/tags/worldgen/biome/has_warppist_crystal.json
+91b0eb2c9a1bca9eaa7aeb065cf6566cc9ef4ef6 data/geode/tags/worldgen/biome/has_wrappist_crystal.json
 91b0eb2c9a1bca9eaa7aeb065cf6566cc9ef4ef6 data/geode/tags/worldgen/biome/has_wrappist_geode.json

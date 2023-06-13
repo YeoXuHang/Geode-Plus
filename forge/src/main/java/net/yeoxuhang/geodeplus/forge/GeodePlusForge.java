@@ -5,11 +5,13 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.GeodePlusClient;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
+import net.yeoxuhang.geodeplus.client.render.CelestitePedestalBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlockEntityRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
@@ -42,6 +44,9 @@ public class GeodePlusForge {
         RegistryHelperImpl.FEATURES.register(eventBus);
         RegistryHelperImpl.PLACED_FEATURES.register(eventBus);
 
+        if (ModList.get().isLoaded("deeperdarker")){
+
+        }
         GeodePlusBiomeModifierRegistry.register(eventBus);
         GeodePlusLootModifierRegistry.register(eventBus);
         eventBus.addListener(this::setup);
@@ -61,6 +66,8 @@ public class GeodePlusForge {
         public static void clientSetup(FMLClientSetupEvent e) {
             GeodePlusClient.initClient();
             BlockEntityRenderers.register(GeodePlusBlockEntityRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), WrappistPedestalBlockEntityRenderer::new);
+            BlockEntityRenderers.register(GeodePlusBlockEntityRegistry.CELESTITE_PEDESTAL_ENTITY.get(), CelestitePedestalBlockEntityRenderer::new);
+
         }
 
         @SubscribeEvent
