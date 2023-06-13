@@ -24,7 +24,6 @@
 
 A mod that add geodes to Minecraft Overworld, Nether and even The End!
 
-Credit: <a href="https://www.curseforge.com/members/orcinus73/projects">Orcinus - Large Crystal feature</a> 
   </div>
 <div align="center">
 <p align="center">
@@ -40,8 +39,8 @@ Credit: <a href="https://www.curseforge.com/members/orcinus73/projects">Orcinus 
 
 [issues-shield]:https://img.shields.io/github/issues/YeoXuHang/Geode-Plus?style=for-the-badge
 [issues-url]: https://github.com/YeoXuHang/Geode-Plus/issues
-[license-shield]: https://img.shields.io/github/license/YeoXuHang/Geode-Plus?style=for-the-badge
-[license-url]: https://github.com/YeoXuHang/Geode-Plus/blob/master/LICENSE
+[license-shield]: https://img.shields.io/badge/LICENSE-CC3.0-5BD847?labelColor=2D2D2D&style=for-the-badge
+[license-url]: https://github.com/YeoXuHang/Geode-Plus/blob/master/LICENSE.md
 [product-screenshot]: logo-for-geode-plus.png
 [yeoxuhangs-server]: https://img.shields.io/discord/936136893119225856?color=5865F2&style=for-the-badge
 [yeoxuhangs-invite]: https://discord.gg/Ephgb4cGsN
